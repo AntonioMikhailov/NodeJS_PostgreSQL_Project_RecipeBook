@@ -1,0 +1,29 @@
+<div class="container">
+ <div class="editRecipe-wrapper">
+   <h4>Редактировать рецепт</h4>
+{{#if currentPhoto}}
+<div><img src=../{{currentPhoto}} alt="фото"></div>
+{{else}}
+<div><img src='../mockUp.jpg' alt="фото"></div>
+{{/if}}
+  <form action="/editrecipe" method="POST" enctype="multipart/form-data">
+  {{!-- Делаем невидимый input чтобы из него получить Id в req.body потом --}}
+  <input type="text" name="id" style="display:none" value={{rows.id}}>
+    <input class="input-type" type="file" name='file' />
+ <div><label for="name">Название</label>  </div>
+ 
+ <input type="text" id="name" name="name" value="{{rows.name}}">
+  <div><label for="ingredients">Состав</label>  </div>
+ 
+ <textarea type="text" id="ingredients" name="ingredients" rows="5">{{rows.ingredients}}</textarea>
+  <div><label for="directions">Порядок приготовления</label>  </div>
+ <div>
+  <textarea   type="text" id="directions" name="directions" cols="30" rows="10">{{rows.directions}}</textarea>
+</div>
+ <button>Изменить</button>
+    {{#if warning}}
+   <div class="warning">Вы не заполнили все поля</div>
+   {{/if}}
+ </form>
+ </div>
+</div>

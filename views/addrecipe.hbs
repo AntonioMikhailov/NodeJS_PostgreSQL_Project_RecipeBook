@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="addRecipe-wrapper">
+    <h4>Добавить рецепт</h4>
+    <hr>
+ 
+ <form action="/addrecipe" method="POST" enctype="multipart/form-data" >
+  <input class="input-type" type="file" name='file' />
+ <div><label for="name">Название</label>  </div>
+  <input type="text" id="name" name="name" value={{name}}>
+   <div><label for="ingredients">Состав</label>  </div>
+ <textarea type="text" id="ingredients" name="ingredients" rows="5"  >{{ingredients}}</textarea>
+  <div><label for="directions">Порядок приготовления</label>  </div>
+ <div>
+  <textarea type="text" id="directions" name="directions" cols="30" rows="10">{{directions}}</textarea>
+</div>
+{{!-- Показываем предупр. если поля не заполнены --}}
+ <button>Добавить</button>
+   {{#if warning}}
+   <div class="warning">Вы не заполнили все поля</div>
+   {{/if}}
+ </form>
+  </div>
+</div>

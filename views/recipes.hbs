@@ -1,0 +1,26 @@
+ 
+<div class="container">
+  <h2>{{title}}</h2>
+ 
+ <div class="description-wrapper">
+   {{#if rows.photo}}
+ <img  src='../{{rows.photo}}' alt="img">
+ {{else}}
+ <img src='../mockUp.jpg' alt="img">
+  {{/if}}
+  <div class="decription-recipe recipe-name ">Название: <br> <hr><span> {{rows.name}}</span> </div>
+  <div class="decription-recipe recipe-ingredients ">Ингредиенты: <br><hr><span>{{rows.ingredients}}</span></div>
+  <div class="decription-recipe recipe-directions ">Порядок приготовления: <br> <hr><span>{{rows.directions}}</span></div>
+  <div class="decription-recipe recipe-date ">Дата создания: <br><hr> <span>{{rows.date}}</span></div>
+ 
+ </div>
+<a href="/editrecipe/{{rows.id}}"> <button>Изменить</button></a> 
+<a href="/"> <button>Назад</button></a> 
+ 
+</div>
+ 
+ 
+ 
+ 
+ 
+ 

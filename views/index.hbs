@@ -1,0 +1,27 @@
+<div class="container">
+<h2>Главная &ndash; Рецепты</h2>
+<hr>
+ {{#each rows}}
+<div class="recipe-wrapper">
+  <div class="recipe-item">
+     <div class="recipe-left">
+      {{#if photo}}
+      <img src={{photo}} alt="фото"> 
+      {{else}}
+      <img src='mockUp.jpg' alt="фото"> 
+      {{/if}}
+        <div class="recipe-bottomRow">
+     <a href="/editrecipe/{{id}}"><button>Редактировать</button></a> 
+   <a href="/removerecipe/{{id}}"><button title="Удалить" class="removeButton">Х</button></a>
+</div>
+  </div>
+ <div class="recipe-right">
+   <div class="recipe-right__name">{{name}}</div> 
+   <hr>
+   <div class="recipe-right__date">Дата создания: {{date}}</div>
+  <a href='/recipes/{{id}}'><button>Смотреть</button></a>
+ </div>
+  </div> 
+ </div>
+{{/each}}
+</div>
