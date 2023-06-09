@@ -24,5 +24,6 @@
 - Создадим структуру папок. Для удобства вынесем логику в файлы - controllers, routes.
 - запросы к БД реализуем через пакет pg-pool
 - отдельные моменты работы описаны в комментариях файлов приложениях 
+
 &nbsp;
  ![recipe-code](https://github.com/AntonioMikhailov/AntonioMikhailov/blob/main/assets/recipe-code.png)
